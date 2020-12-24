@@ -1,0 +1,113 @@
+@import "./normalize.css";
+
+:root {
+    --color-text: #666;
+    --color-high-text: #ff5777;
+    --color-tint: #ff8198;
+    --color-background: #fff;
+    --font-size: 14px;
+    --line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+body, button, input, select, textarea {
+    font:12px/1.5tahoma, arial, \5b8b\4f53;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size:100%;
+}
+address, cite, dfn, em, var {
+    font-style:normal;
+}
+code, kbd, pre, samp {
+    font-family:couriernew, courier, monospace;
+}
+small {
+    font-size:12px;
+}
+ul, ol {
+    list-style:none;
+}
+a {
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+sup {
+    vertical-align:text-top;
+}
+sub {
+    vertical-align:text-bottom;
+}
+legend {
+    color:#000;
+}
+fieldset, img {
+    border:0;
+}
+button, input, select, textarea {
+    font-size:100%;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: ".";
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+    overflow:hidden;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('~assets/icon-font/iconfont.eot');
+  src: url('~assets/icon-font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('~assets/icon-font/iconfont.woff2') format('woff2'),
+      url('~assets/icon-font/iconfont.woff') format('woff'),
+      url('~assets/icon-font/iconfont.ttf') format('truetype'),
+      url('~assets/icon-font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  display: block;
+  font-family: "iconfont" !important;
+  font-size: 25px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
