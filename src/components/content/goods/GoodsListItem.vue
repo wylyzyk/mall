@@ -1,7 +1,7 @@
 <template>
   <div class="goods-item" @click="toList">
     <img
-      :src="goodsItem.show.img"
+      v-lazy="showImage"
       @load="imgLoaded"
     >
     <div class="goods-info">
@@ -22,10 +22,15 @@ export default {
       }
     }
   },
+  computed: {
+    showImage() {
+      return this.goodsItem.image || this.goodsItem.show.img;
+    }
+  },
   methods: {
     imgLoaded () {
       // 通过事件总线将图片加载完成事件传递出去
-    this.$bus.$emit("itemImageLoaded");
+      this.$bus.$emit("itemImageLoaded");
     },
     toList () {
       // console.log(this.goodsItem);

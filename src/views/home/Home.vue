@@ -1,4 +1,4 @@
-<template>
+<template scoped>
   <div id="home">
     <nav-bar class="home-nav">
       <div slot="center">购物街</div>
@@ -27,7 +27,8 @@
       <recommend-view :recommends="recommends" />
       <feature-view />
       <tab-control
-        class="tab-control"
+        class="tab-control
+        "
         :titles="['热门', '流行', '精选']"
         @selectItem="selectGoodsType"
         @swiperImgLoaded="swiperLoaded"
@@ -56,7 +57,7 @@ import BackTop from 'components/common/backTop/BackTop'
 
 // 方法
 import { getHomeMultidata, getHomeGoods } from "network/home"
-
+import { itemImgLoad } from 'common/mixin';
 export default {
   name: "Home",
   components: {
@@ -69,6 +70,7 @@ export default {
     Scroll,
     BackTop
   },
+  mixins: [itemImgLoad],
   data () {
     return {
       banners: [],
@@ -105,22 +107,24 @@ export default {
   },
   mounted () {
 
-    // 调用防抖函数的返回值
-    const refresh = this.debounce(this.$refs.scroll.scrollRefresh, 200);
-    // 3. 在一开始监听图片加载
-    this.$bus.$on("itemImageLoaded", () => {
-      refresh();
-      // this.$refs.scroll.scrollRefresh();
-    });
+    // // 调用防抖函数的返回值
+    // const refresh = this.debounce(this.$refs.scroll.scrollRefresh, 200);
+    // // 3. 在一开始监听图片加载
+    // this.$bus.$on("itemImageLoaded", () => {
+    //   refresh();
+    //   // this.$refs.scroll.scrollRefresh();
+    // });
   },
   activated () {
-    console.log(this.scrollY);
+    // console.log(this.scrollY);
     this.$refs.scroll.scrollTo(0, this.scrollY, 0);
     // this.$refs.scroll.scrollRefresh();
   },
   deactivated () {
     this.scrollY = this.$refs.scroll.getScrollY();
-    console.log(this.scrollY);
+    // console.log(this.scrollY);
+
+    this.$bus.$off("itemImageLoaded", this.itemImgListener);
   },
   methods: {
     /**
@@ -163,16 +167,16 @@ export default {
       }, 2000);
     },
     // 防抖函数， 防止客户端多次向服务器进行数据提交
-    debounce (callback, delay) {
-      let timer = null;
+    // debounce (callback, delay) {
+    //   let timer = null;
 
-      return function (...args) {
-        if (timer) clearTimeout(timer);
-        timer = setTimeout(() => {
-          callback.apply(this, args);
-        }, delay);
-      }
-    },
+    //   return function (...args) {
+    //     if (timer) clearTimeout(timer);
+    //     timer = setTimeout(() => {
+    //       callback.apply(this, args);
+    //     }, delay);
+    //   }
+    // },
 
     /**
      * 网络请求相关方法

@@ -1,4 +1,4 @@
-<template>
+<template scoped>
   <div
     class="wrapper"
     ref="wrapper"

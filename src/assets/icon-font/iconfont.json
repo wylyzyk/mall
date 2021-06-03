@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "7549347",
+      "name": "完成",
+      "font_class": "RectangleCopy",
+      "unicode": "e6a1",
+      "unicode_decimal": 59041
+    },
+    {
       "icon_id": "11372639",
       "name": "爱心",
       "font_class": "aixin",
@@ -53,6 +60,27 @@
       "font_class": "arrow-left",
       "unicode": "e743",
       "unicode_decimal": 59203
+    },
+    {
+      "icon_id": "11487985",
+      "name": "atm",
+      "font_class": "atm",
+      "unicode": "e744",
+      "unicode_decimal": 59204
+    },
+    {
+      "icon_id": "12011695",
+      "name": "favorites",
+      "font_class": "favorites",
+      "unicode": "e7b3",
+      "unicode_decimal": 59315
+    },
+    {
+      "icon_id": "13087822",
+      "name": "仓库",
+      "font_class": "cangku",
+      "unicode": "e7c1",
+      "unicode_decimal": 59329
     }
   ]
 }
