@@ -4,26 +4,26 @@
   </div>
 </template>
 <script>
-export default {
-  name: "Toast",
-  data() {
-    return {
-      message: "this is a toast",
-      isShow: false
-    }
-  },
-  methods: {
-    showToast(msg, duration = 2000) {
-      this.message = msg;
-      this.isShow = true;
+  export default {
+    name: "Toast",
+    data() {
+      return {
+        message: "this is a toast",
+        isShow: false
+      };
+    },
+    methods: {
+      showToast(msg, duration = 2000) {
+        this.message = msg;
+        this.isShow = true;
 
-      setTimeout(() => {
-        this.isShow = false;
-        this.message = "";
-      }, duration);
+        setTimeout(() => {
+          this.isShow = false;
+          this.message = "";
+        }, duration);
+      }
     }
-  }
-}
+  };
 </script>
 <style scoped>
   #toast {
@@ -34,11 +34,11 @@ export default {
     z-index: 2;
 
     padding: 10px 15px;
-    border-radius: 12px;
+    border-radius: 6px;
     transform: translate(-50%, -50%);
 
     font-size: 12px;
     color: #fff;
-    background-color: rgba(0, 0, 0, .65);
+    background-color: rgba(0, 0, 0, 0.65);
   }
 </style>

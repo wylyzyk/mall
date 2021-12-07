@@ -1,7 +1,7 @@
 <template scoped>
   <div id="home">
     <nav-bar class="home-nav">
-      <div slot="center">购物街</div>
+      <div slot="center">衣橱</div>
     </nav-bar>
 
     <tab-control

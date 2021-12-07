@@ -4,23 +4,22 @@
   </div>
 </template>
 <script>
-export default {
-  name: "CheckButton",
-  props: {
-    isChecked: {
-      type: Boolean,
-      default: false
+  export default {
+    name: "CheckButton",
+    props: {
+      isChecked: {
+        type: Boolean,
+        default: false
+      }
     }
-  }
-}
+  };
 </script>
 <style scoped>
-
   .checked {
     color: orangered;
   }
 
   .iconfont {
-    font-size: 20px;
+    font-size: 25px;
   }
 </style>

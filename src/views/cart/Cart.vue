@@ -25,6 +25,9 @@
       CartList,
       CartTotal
     },
+    mounted() {
+      this.$toast.showToast("演示需要，所以未登录可以使用购物车~", 3000);
+    },
     computed: {
       ...mapGetters({
         length: "cartLength"
