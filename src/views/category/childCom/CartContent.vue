@@ -2,7 +2,7 @@
   <div id="cart-content">
     <scroll class="scroll-content">
       <ul class="content-box">
-        <li class="content-item" v-for="item in cart" :key="item.title" @click="">
+        <li class="content-item" v-for="item in cart" :key="item.acm" @click="">
           <a :href="item.link">
             <img :src="item.image" alt="" />
           </a>

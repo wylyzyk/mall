@@ -58,7 +58,6 @@
       itemClick(index) {
         console.log(index);
         this.currentIndex = index;
-        console.log(this.currentIndex)
         this._getSubCategory(this.sortList[index].maitKey);
       }
     }
